@@ -24,7 +24,6 @@ class TextFieldWidget extends StatelessWidget {
                 controller: controller,
                 style: TextStyle(
                   color: Theme.of(context).primaryColorDark,
-                  // color: ColorConstants.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
@@ -33,7 +32,6 @@ class TextFieldWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
                       color: Theme.of(context).cardColor,
-                      // color: ColorConstants.textBorder,
                       width: 1,
                     ),
                   ),
@@ -55,19 +53,16 @@ class TextFieldWidget extends StatelessWidget {
                 enabled: false,
                 style: TextStyle(
                   color: Theme.of(context).primaryColorDark,
-                  // color: ColorConstants.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Theme.of(context).primaryColor,
-                  // fillColor: ColorConstants.textFillColor,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
                       color: Theme.of(context).cardColor,
-                      // color: ColorConstants.textBorder,
                       width: 1,
                     ),
                   ),
@@ -75,7 +70,6 @@ class TextFieldWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
                       color: Theme.of(context).cardColor,
-                      // color: ColorConstants.textBorder,
                       width: 1,
                     ),
                   ),
