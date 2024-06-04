@@ -1,58 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-
-void main() {
-  runApp(const SampleHome());
-}
-
-class SampleHome extends StatefulWidget {
-  const SampleHome({super.key});
-
-  @override
-  State<SampleHome> createState() => _SampleHomeState();
-}
-
-class _SampleHomeState extends State<SampleHome> {
-  late TextEditingController dateController;
-
-  @override
-  void initState() {
-    super.initState();
-    dateController = TextEditingController();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                  height: 80,
-                  width: 300,
-                  child: Center(
-                      child: DatepickerWidget(
-                          controller: dateController,
-                          hinttext: 'Limit Validity'))),
-              IconButton(
-                onPressed: () {
-                  log(dateController.text);
-                  
-                },
-                icon: const Icon(Icons.calendar_today),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class DatepickerWidget extends StatelessWidget {
   const DatepickerWidget(
