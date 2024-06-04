@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
-class DatepickerWidget extends StatelessWidget {
-  const DatepickerWidget(
+class CustomDatepickerWidget extends StatelessWidget {
+  const CustomDatepickerWidget(
       {super.key, required this.controller, required this.hinttext});
   final TextEditingController controller;
   final String hinttext;

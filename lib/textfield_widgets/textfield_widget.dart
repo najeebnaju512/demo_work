@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class TextFieldWidget extends StatelessWidget {
+class CustomTextFieldWidget extends StatelessWidget {
   final bool isEditable;
   final TextEditingController? controller;
   final Icon? suffixIcon;
   final void Function()? onSuffixIconPressed;
+  final String? hinttext;
 
-  TextFieldWidget({
+  CustomTextFieldWidget({
     required this.isEditable,
     this.controller,
     this.suffixIcon,
-    this.onSuffixIconPressed,
+    this.onSuffixIconPressed, this.hinttext,
   });
 
   @override
@@ -28,6 +29,7 @@ class TextFieldWidget extends StatelessWidget {
                   fontSize: 14,
                 ),
                 decoration: InputDecoration(
+                  hintText: hinttext,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
@@ -49,7 +51,7 @@ class TextFieldWidget extends StatelessWidget {
               height: 52,
               child: TextFormField(
                 initialValue:
-                    'Net 60 Days from Statement Date (Non-editable Text Field)',
+                    hinttext,
                 enabled: false,
                 style: TextStyle(
                   color: Theme.of(context).primaryColorDark,
@@ -58,7 +60,7 @@ class TextFieldWidget extends StatelessWidget {
                 ),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Theme.of(context).primaryColor,
+                  fillColor: Theme.of(context).primaryColorLight,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
