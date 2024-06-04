@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ConditionalTextField extends StatelessWidget {
+class TextFieldWidget extends StatelessWidget {
   final bool isEditable;
   final TextEditingController? controller;
   final Icon? suffixIcon;
   final void Function()? onSuffixIconPressed;
 
-  ConditionalTextField({
+  TextFieldWidget({
     required this.isEditable,
     this.controller,
     this.suffixIcon,

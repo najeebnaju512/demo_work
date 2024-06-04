@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 class ColorConstants {
@@ -6,3 +7,4 @@ class ColorConstants {
   static Color textBorder = const Color(0XFFCBCBCB);
   static Color textFillColor = const Color(0XFFFAFAFA);
 }
+*/
