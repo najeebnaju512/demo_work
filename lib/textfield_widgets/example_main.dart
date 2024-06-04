@@ -1,5 +1,5 @@
 import 'package:demo_work/textfield_widgets/edit_textfield.dart';
-import 'package:demo_work/textfield_widgets/merge_textfield.dart';
+import 'package:demo_work/textfield_widgets/conditional_textfield.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +20,6 @@ class ExampleMain extends StatefulWidget {
 }
 
 class _ExampleMainState extends State<ExampleMain> {
-  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,23 +31,20 @@ class _ExampleMainState extends State<ExampleMain> {
             SizedBox(
               height: 20,
             ),
-            // TextFieldScreen(hintText: "sample"),
             SizedBox(
               height: 20,
             ),
-            EditTextField(controller: _controller,),
+            EditTextField(
+              // controller: _controller,
+            ),
             SizedBox(
               height: 20,
             ),
-            // EditableTextField(
-            //   textEditController: _controller,
-            // ),
-            // SizedBox(
-            //   height: 20,
-            // ),
             ConditionalTextField(isEditable: true),
+            SizedBox(
+              height: 20,
+            ),
             ConditionalTextField(isEditable: false)
-         
           ],
         ),
       ),
