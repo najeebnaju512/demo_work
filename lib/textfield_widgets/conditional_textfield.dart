@@ -1,4 +1,3 @@
-import 'package:demo_work/textfield_widgets/colors/color_constants.dart';
 import 'package:flutter/material.dart';
 
 class ConditionalTextField extends StatelessWidget {
@@ -24,7 +23,8 @@ class ConditionalTextField extends StatelessWidget {
               child: TextField(
                 controller: controller,
                 style: TextStyle(
-                  color: ColorConstants.black,
+                  color: Theme.of(context).primaryColorDark,
+                  // color: ColorConstants.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
@@ -32,7 +32,8 @@ class ConditionalTextField extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
-                      color: ColorConstants.textBorder,
+                      color: Theme.of(context).cardColor,
+                      // color: ColorConstants.textBorder,
                       width: 1,
                     ),
                   ),
@@ -53,24 +54,28 @@ class ConditionalTextField extends StatelessWidget {
                     'Net 60 Days from Statement Date (Non-editable Text Field)',
                 enabled: false,
                 style: TextStyle(
-                  color: ColorConstants.black,
+                  color: Theme.of(context).primaryColorDark,
+                  // color: ColorConstants.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: ColorConstants.white,
+                  fillColor: Theme.of(context).primaryColor,
+                  // fillColor: ColorConstants.textFillColor,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
-                      color: ColorConstants.textBorder,
+                      color: Theme.of(context).cardColor,
+                      // color: ColorConstants.textBorder,
                       width: 1,
                     ),
                   ),
                   disabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(
-                      color: ColorConstants.textBorder,
+                      color: Theme.of(context).cardColor,
+                      // color: ColorConstants.textBorder,
                       width: 1,
                     ),
                   ),
