@@ -1,8 +1,6 @@
 import 'package:demo_work/textfield_widgets/colors/color_constants.dart';
 import 'package:flutter/material.dart';
 
-
-
 class NonEditableTextField extends StatelessWidget {
   const NonEditableTextField({super.key});
 
@@ -43,8 +41,3 @@ class NonEditableTextField extends StatelessWidget {
     );
   }
 }
-
-///add border of width 1px with color 
-///add textfield fill color
-///curve in all border with 6px
-///width of textfield is 487px and height is 52px

@@ -1,7 +1,5 @@
 import 'package:demo_work/textfield_widgets/edit_textfield.dart';
-import 'package:demo_work/textfield_widgets/samples/editable_textfield.dart';
-import 'package:demo_work/textfield_widgets/samples/example_textfields.dart';
-import 'package:demo_work/textfield_widgets/non_editable_textfield.dart';
+import 'package:demo_work/textfield_widgets/merge_textfield.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,7 +32,7 @@ class _ExampleMainState extends State<ExampleMain> {
             SizedBox(
               height: 20,
             ),
-            TextFieldScreen(hintText: "sample"),
+            // TextFieldScreen(hintText: "sample"),
             SizedBox(
               height: 20,
             ),
@@ -45,10 +43,11 @@ class _ExampleMainState extends State<ExampleMain> {
             // EditableTextField(
             //   textEditController: _controller,
             // ),
-            SizedBox(
-              height: 20,
-            ),
-            NonEditableTextField(),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            ConditionalTextField(isEditable: true),
+            ConditionalTextField(isEditable: false)
          
           ],
         ),
