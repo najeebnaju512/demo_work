@@ -26,15 +26,15 @@ class CustomFilledButton extends StatelessWidget {
     this.textFontSize,
     this.textColor,
     this.buttonColor,
-  }) : assert(icon != null || buttonText != null, 'At least one value (icon or buttonText) must be provided.');
+  }) : assert(icon != null || buttonText != null,
+            'At least one value (icon or buttonText) must be provided.');
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return SizedBox(
       width: width,
-      height: height,
-      child: FilledButton(
+      height: height,      child: FilledButton(
         style: ButtonStyle(
           backgroundColor: buttonColor ??
               WidgetStateProperty.all<Color>(Theme.of(context).primaryColor),
@@ -55,14 +55,16 @@ class CustomFilledButton extends StatelessWidget {
               Icon(
                 icon,
                 size: iconSize,
-                color: iconColor??Theme.of(context).primaryColor,
+                color: iconColor ?? Theme.of(context).primaryColor,
               ),
             if (icon != null && buttonText != null)
               SizedBox(width: size.width * .02), // Space between icon and text
             if (buttonText != null)
               Text(
                 buttonText!,
-                style: TextStyle(fontSize: textFontSize, color: textColor??Theme.of(context).primaryColor),
+                style: TextStyle(
+                    fontSize: textFontSize,
+                    color: textColor ?? Theme.of(context).primaryColor),
               ),
           ],
         ),

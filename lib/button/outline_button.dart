@@ -33,7 +33,7 @@ class CustomOutlineButton extends StatelessWidget {
         onPressed: onPressed,
         style: ButtonStyle(
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
+            RoundedRectangleBorder(side: BorderSide(color: Colors.black,width: 5, ),
               borderRadius: BorderRadius.circular(
                   6.0), // Rectangular shape with rounded corners
             ),
