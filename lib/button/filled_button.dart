@@ -60,7 +60,7 @@ class CustomFilledButton extends StatelessWidget {
             if (icon != null && buttonText != null)
               SizedBox(width: size.width * .02), // Space between icon and text
             if (buttonText != null)
-              Flexible(
+              FittedBox(
                 child: Text(
                   buttonText!,
                   style: TextStyle(fontSize: textFontSize, color: textColor??Theme.of(context).primaryColorLight),
