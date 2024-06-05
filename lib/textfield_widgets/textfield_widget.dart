@@ -7,7 +7,7 @@ class CustomTextFieldWidget extends StatelessWidget {
   final void Function()? onSuffixIconPressed;
   final String? hinttext;
 
-  CustomTextFieldWidget({
+  const CustomTextFieldWidget({super.key, 
     required this.isEditable,
     this.controller,
     this.suffixIcon,
