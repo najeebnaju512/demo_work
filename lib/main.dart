@@ -7,6 +7,7 @@ import 'package:demo_work/dropdown/widget/dropdown_widget.dart';
 import 'package:demo_work/search_bar.dart';
 import 'package:demo_work/textfield_widgets/textfield_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'dropdown/image_picker.dart';
 import 'model.dart';
@@ -82,8 +83,12 @@ class MyHome extends StatelessWidget {
                     CustomIconButton(
                       icon: Icons.arrow_back,
                     ),
-                    SearchWidget(
-                      hintText: "What Are You Seeking For?",
+                    Expanded(
+                      child: SizedBox(
+                        child: SearchWidget(
+                          hintText: "What Are You Seeking For?",
+                        ),
+                      ),
                     ),
                   ],
                 ),
