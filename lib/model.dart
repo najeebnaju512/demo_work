@@ -10,6 +10,7 @@ class SampleModel {
   });
 
 
+  @override
   String toString(){
     return "$firstname";
   }

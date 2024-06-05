@@ -18,6 +18,14 @@ List<dynamic> suggestions = [
   SampleModel(lastname: "duglas", firstname: "anush"),
 ];
 
+final List<String> dropList = [
+  'Sales Type 1',
+  'Sales Type 2',
+  'Sales Type 3',
+  'Sales Type 4',
+  'Sales Type 5'
+];
+
 void main() {
   runApp(const MyApp());
 }
@@ -69,7 +77,7 @@ class MyHome extends StatelessWidget {
             width: size.width * .5,
             child: Column(
               children: [
-                Row(
+                const Row(
                   children: [
                     CustomIconButton(
                       icon: Icons.arrow_back,
@@ -79,7 +87,7 @@ class MyHome extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CustomOutlineButton(
@@ -95,12 +103,12 @@ class MyHome extends StatelessWidget {
                     )
                   ],
                 ),
-                CustomDropDown(),
+                CustomDropDown(list: dropList),
                 CustomDatepickerWidget(
                     controller: dateController, hinttext: "Limit Validity"),
-                CustomTextFieldWidget(
+                const CustomTextFieldWidget(
                     isEditable: true, hinttext: "Limit Validity"),
-                CustomTextFieldWidget(
+                const CustomTextFieldWidget(
                     isEditable: false,
                     hinttext:
                         'Net 60 Days from Statement Date (Non-editable Text Field)'),
@@ -110,11 +118,11 @@ class MyHome extends StatelessWidget {
                         text: "Unlimited", isSelected: true, onTap: () {}),
                     CustomRadioButton(
                         text: "Unlimited", isSelected: false, onTap: () {}),
-                    CustomFilledButton(
+                    const CustomFilledButton(
                       icon: Icons.add,
                       iconSize: 20,
                     ),
-                    CustomFilledButton(
+                    const CustomFilledButton(
                       icon: Icons.add,
                       iconSize: 20,
                       buttonText: "Add Another Field",
@@ -126,7 +134,7 @@ class MyHome extends StatelessWidget {
               ],
             ),
           ),
-          CustomImagePicker()
+          const CustomImagePicker()
         ],
       ),
     );

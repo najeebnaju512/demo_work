@@ -2,17 +2,12 @@ import 'package:demo_work/button/filled_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomDropDown extends StatelessWidget {
-  CustomDropDown({
+  const CustomDropDown({
     super.key,
+    required this.list,
   });
 
-  final List<String> list = [
-    'Sales Type 1',
-    'Sales Type 2',
-    'Sales Type 3',
-    'Sales Type 4',
-    'Sales Type 5'
-  ];
+  final List<dynamic> list;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +15,7 @@ class CustomDropDown extends StatelessWidget {
       width: 532,
       color: Colors.blue,
       child: DropdownButtonFormField(
-        style: TextStyle(fontSize: 15),
+        style: const TextStyle(fontSize: 15),
         borderRadius: BorderRadius.circular(5),
         decoration: const InputDecoration(
             isDense: true,
@@ -37,7 +32,7 @@ class CustomDropDown extends StatelessWidget {
             enabledBorder: OutlineInputBorder(
                 borderSide:
                     BorderSide(color: Color.fromARGB(100, 203, 203, 203)))),
-        icon: IntrinsicWidth(
+        icon: const IntrinsicWidth(
           child: Row(
             children: [
               CustomFilledButton(
@@ -54,15 +49,15 @@ class CustomDropDown extends StatelessWidget {
         items: list
             .map(
               (e) => DropdownMenuItem(
+                value: e,
                 child: Text(
                   "$e",
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
-                value: e,
               ),
             )
             .toList(),
-        onChanged: (value) => null,
+        onChanged: (value) {},
       ),
     );
   }

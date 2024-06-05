@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/foundation.dart';
@@ -6,7 +7,7 @@ import 'package:flutter_dropzone/flutter_dropzone.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CustomImagePicker extends StatefulWidget {
-  CustomImagePicker({super.key});
+  const CustomImagePicker({super.key});
 
   @override
   State<CustomImagePicker> createState() => _CustomImagePickerState();
@@ -34,7 +35,7 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
         });
       }
     } else {
-      print('No image selected.');
+      log('No image selected.');
     }
   }
 
@@ -59,8 +60,8 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
     return DottedBorder(
       borderType: BorderType.RRect,
       color: Colors.grey,
-      dashPattern: [6, 6],
-      radius: Radius.circular(12),
+      dashPattern: const [6, 6],
+      radius: const Radius.circular(12),
       child: Container(
         height: 345,
         width: 220,
@@ -77,17 +78,17 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
             ),
             _webImage == null && _image == null
                 ? Align(
-                    alignment: Alignment(0, 0),
+                    alignment: const Alignment(0, 0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "Add Image",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w600),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         GestureDetector(
@@ -99,7 +100,7 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
                                 shape: BoxShape.circle,
                                 border:
                                     Border.all(color: Colors.black, width: 2)),
-                            child: Center(
+                            child: const Center(
                               child: Icon(
                                 Icons.add,
                                 size: 28,
@@ -107,10 +108,10 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           "Drag and drop or choose file to upload",
                           style: TextStyle(
                               fontSize: 9, fontWeight: FontWeight.w500),
@@ -119,7 +120,7 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
                     ),
                   )
                 : Align(
-                    alignment: Alignment(0, 0),
+                    alignment: const Alignment(0, 0),
                     child: Container(
                       height: 150,
                       width: 150,
@@ -129,16 +130,16 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
                             ? MemoryImage(_webImage!) as ImageProvider
                             : (_image != null)
                                 ? FileImage(_image!)
-                                : AssetImage('assets/noimage.png'),
+                                : const AssetImage('assets/noimage.png'),
                       )),
                     ),
                   ),
             Align(
-                alignment: Alignment(0.9, -0.9),
+                alignment: const Alignment(0.9, -0.9),
                 child: IconButton(
                   color: Colors.grey,
                   onPressed: () => removeImage(),
-                  icon: Icon(Icons.delete),
+                  icon: const Icon(Icons.delete),
                 ))
           ],
         ),
