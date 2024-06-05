@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
-class DropdownWidget extends StatelessWidget {
+class DropdownWidget extends StatefulWidget {
    DropdownWidget({
     super.key,
   });
 
+  @override
+  State<DropdownWidget> createState() => _DropdownWidgetState();
+}
+
+class _DropdownWidgetState extends State<DropdownWidget> {
   final List<String> list = ['Sales Type 1', 'Sales Type 2', 'Sales Type 3', 'Sales Type 4', 'Sales Type 5'];
 
+   String? selectedValue;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,6 @@ class DropdownWidget extends StatelessWidget {
       color: Colors.blue,
       child: DropdownButtonFormField(
         style: TextStyle(fontSize: 15),
-
         borderRadius: BorderRadius.circular(5),
         decoration:const InputDecoration(
             isDense: true,
@@ -50,7 +55,12 @@ class DropdownWidget extends StatelessWidget {
           ),
         ),
         items: list.map( (e) => DropdownMenuItem(child: Text("$e",style: TextStyle(fontSize: 15),),value: e,),).toList(),
-        onChanged: (value) => null,),
+        onChanged: (value) {
+          setState(() {
+            selectedValue = value;
+            print(selectedValue);
+          });
+        },),
     );
   }
 }

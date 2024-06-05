@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dropzone/flutter_dropzone.dart';
 import 'package:image_picker/image_picker.dart';
 
-
-
 class SimpleDropdownWidget extends StatefulWidget {
    SimpleDropdownWidget({super.key});
 
@@ -71,7 +69,7 @@ class _SimpleDropdownWidgetState extends State<SimpleDropdownWidget> {
             children: [
               SizedBox(height: 30,),
               Text("Dropdown Menu Items"),
-              SizedBox(
+             const SizedBox(
                 height: 20,
               ),
               DropdownWidget(),
@@ -79,8 +77,8 @@ class _SimpleDropdownWidgetState extends State<SimpleDropdownWidget> {
               DottedBorder(
                 borderType: BorderType.RRect,
                 color: Colors.grey,
-                dashPattern: [6,6],
-                radius: Radius.circular(12),
+                dashPattern: const [6,6],
+                radius:const Radius.circular(12),
                 child: Container(
                   height: 345,
                   width: 220,
