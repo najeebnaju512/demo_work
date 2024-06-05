@@ -6,21 +6,20 @@ class CustomRadioButton extends StatelessWidget {
   final Function onTap;
 
   const CustomRadioButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.isSelected,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    var size= MediaQuery.of(context).size;
     return InkWell(
       onTap: () => onTap(),
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(right: 8.0),
+            margin: const EdgeInsets.only(right: 8.0),
             height: 24.0,
             width: 24.0,
             decoration: BoxDecoration(

@@ -11,7 +11,7 @@ class CustomOutlineButton extends StatelessWidget {
   final double? textFontSize;
   final Color? textColor;
 
-  CustomOutlineButton(
+  const CustomOutlineButton(
       {super.key,
       this.icon,
       this.iconSize,
